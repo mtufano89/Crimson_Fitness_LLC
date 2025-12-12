@@ -15,13 +15,13 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* GENERIC BUTTON */
+/* GENERIC BUTTON (used for bottom CTA) */
 .btn-primary {
     display: inline-block;
     padding: 10px 22px;
     background: #b01829;
     color: #ffffff;
-    border-radius: 6px;
+    border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
 }
@@ -115,16 +115,14 @@ body {
     }
 }
 
-/* HERO SECTION */
-/* FULL-WIDTH HERO WITH BACKGROUND IMAGE */
-/* FULL-WIDTH HERO WITH BACKGROUND IMAGE + GRADIENT FADE */
+/* HERO SECTION – FULL-WIDTH BACKGROUND IMAGE + GRADIENT FADE */
 .hero {
     position: relative;
     width: 100%;
     height: 480px;
     background-image: url("images/hero.jpg");
     background-size: cover;
-    background-position: center bottom; /* shows more of the bar + floor */
+    background-position: center bottom;
     background-repeat: no-repeat;
 
     display: flex;
@@ -183,8 +181,7 @@ body {
     color: #e5e5e5;
 }
 
-/* CTA BUTTON – black with red glow (same as before) */
-/* HERO CTA BUTTON – premium look */
+/* HERO CTA BUTTON – black with crimson outline + glow */
 .hero-btn {
     display: inline-block;
     background: #000000;
@@ -196,9 +193,9 @@ body {
     text-decoration: none;
     letter-spacing: .7px;
 
-    border: 3px solid #b01829; /* crimson border */
+    border: 3px solid #b01829;
     box-shadow: 0 0 0 rgba(176, 24, 41, 0);
-    transition: 
+    transition:
         box-shadow 0.25s ease,
         transform 0.2s ease,
         background 0.25s ease,
@@ -221,9 +218,6 @@ body {
         0 4px 12px rgba(0,0,0,0.5);
 }
 
-
-
-
 /* RESPONSIVE HERO */
 @media (max-width: 900px) {
     .hero {
@@ -243,12 +237,27 @@ body {
 /* WHO I WORK WITH */
 .who {
     background: #f5f5f5;
-    padding: 60px 50px;
+    padding: 55px 50px 60px;
     text-align: center;
 }
 
+/* Underline for "Who I Work With" */
 .who h2 {
-    margin-bottom: 30px;
+    margin-bottom: 26px;
+    position: relative;
+    display: inline-block;
+}
+
+.who h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -8px;
+    width: 60px;
+    height: 3px;
+    border-radius: 999px;
+    background: #b01829;
 }
 
 .who-grid {
@@ -258,9 +267,15 @@ body {
     margin-top: 10px;
 }
 
+/* Unified card corner system */
+.who-card,
+.training-panel,
+.testimonial-slide {
+    border-radius: 12px;
+}
+
 .who-card {
     background: #ffffff;
-    border-radius: 12px;
     border: 1px solid #e5e5e5;
     padding: 0 0 20px;
     text-align: left;
@@ -274,6 +289,7 @@ body {
     height: 240px;
     object-fit: cover;
     object-position: center top;
+    border-radius: 12px 12px 0 0;
 }
 
 .who-card h3 {
@@ -288,20 +304,6 @@ body {
     margin: 0 16px 10px;
 }
 
-/* responsive */
-@media (max-width: 1000px) {
-    .who-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .who-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-
 /* WHO GRID – MOBILE */
 @media (max-width: 1000px) {
     .who-grid {
@@ -315,22 +317,29 @@ body {
     }
 }
 
-/* SERVICES */
+/* SERVICES / TRAINING OPTIONS */
 .services {
     padding: 70px 50px;
-}
-
-.services h2 {
     text-align: center;
 }
 
-.services {
-    padding: 70px 50px;
+/* Underline for "Personal Training Built Around You" */
+.services h2 {
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
 }
 
-.services h2 {
-    text-align: center;
-    margin-bottom: 24px;
+.services h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    width: 60px;
+    height: 3px;
+    border-radius: 999px;
+    background: #b01829;
 }
 
 /* Pills row */
@@ -339,11 +348,11 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     gap: 12px;
-    margin-bottom: 28px;
+    margin: 32px 0 28px;
 }
 
 .training-pill {
-    border-radius: 999px;
+    border-radius: 50px;
     border: 1px solid #d6d6d6;
     background: #ffffff;
     padding: 10px 22px;
@@ -351,7 +360,12 @@ body {
     font-weight: 600;
     letter-spacing: 0.5px;
     cursor: pointer;
-    transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.15s ease;
 }
 
 .training-pill:hover {
@@ -373,7 +387,6 @@ body {
     max-width: 900px;
     margin: 0 auto;
     padding: 24px 26px;
-    border-radius: 14px;
     border: 1px solid #e3e3e3;
     background: #fafafa;
     box-shadow: 0 4px 14px rgba(0,0,0,0.04);
@@ -405,48 +418,30 @@ body {
     }
 }
 
-
-/* SERVICES – MOBILE */
-@media (max-width: 900px) {
-    .service-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 600px) {
-    .service-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* TESTIMONIALS */
-.testimonials {
-    padding: 70px 50px;
-    background: #f7f7f7;
-    text-align: center;
-}
-
-.testimonial-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.testimonial-card {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    border: 1px solid #eee;
-    font-style: italic;
-}
-
-/* TESTIMONIALS – MOBILE */
-/* TESTIMONIAL SLIDER */
+/* TESTIMONIALS / SLIDER */
 .testimonials {
     padding: 80px 50px;
     background: #f7f7f7;
     text-align: center;
+}
+
+/* Underline for "What Clients Say" */
+.testimonials h2 {
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.testimonials h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    width: 60px;
+    height: 3px;
+    border-radius: 999px;
+    background: #b01829;
 }
 
 .testimonial-slider {
@@ -461,7 +456,6 @@ body {
     transition: opacity 0.6s ease;
     background: #ffffff;
     padding: 40px 30px;
-    border-radius: 16px;
     border: 1px solid #e5e5e5;
     box-shadow: 0 8px 24px rgba(0,0,0,0.06);
 }
@@ -518,7 +512,6 @@ body {
     transform: translateY(0);
 }
 
-
 /* FINAL CTA */
 .cta {
     padding: 80px 50px;
@@ -528,4 +521,10 @@ body {
 .cta p {
     margin: 15px 0 30px;
     color: #444;
+}
+
+@media (max-width: 600px) {
+    .cta {
+        padding: 60px 20px;
+    }
 }
