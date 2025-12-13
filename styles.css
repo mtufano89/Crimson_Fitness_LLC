@@ -119,7 +119,7 @@ body {
 .hero {
     position: relative;
     width: 100%;
-    height: 480px;
+    height: 440px;
     background-image: url("images/hero.jpg");
     background-size: cover;
     background-position: center bottom;
@@ -127,7 +127,7 @@ body {
 
     display: flex;
     align-items: center;
-    padding: 80px 60px;
+    padding: 70px 60px;
     color: #ffffff;
     overflow: hidden;
 }
@@ -237,7 +237,7 @@ body {
 /* WHO I WORK WITH */
 .who {
     background: #f5f5f5;
-    padding: 55px 50px 60px;
+    padding: 45px 50px 60px;
     text-align: center;
 }
 
@@ -319,13 +319,13 @@ body {
 
 /* SERVICES / TRAINING OPTIONS */
 .services {
-    padding: 70px 50px;
+    padding: 60px 50px;
     text-align: center;
 }
 
 /* Underline for "Personal Training Built Around You" */
 .services h2 {
-    margin-bottom: 30px;
+    margin-bottom: 24px;
     position: relative;
     display: inline-block;
 }
@@ -348,7 +348,7 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     gap: 12px;
-    margin: 32px 0 28px;
+    margin: 24px 0 22px;
 }
 
 .training-pill {
@@ -420,7 +420,7 @@ body {
 
 /* TESTIMONIALS / SLIDER */
 .testimonials {
-    padding: 80px 50px;
+    padding: 70px 50px;
     background: #f7f7f7;
     text-align: center;
 }
@@ -447,7 +447,7 @@ body {
 .testimonial-slider {
     position: relative;
     max-width: 750px;
-    margin: 40px auto 0;
+    margin: 30px auto 0;
 }
 
 .testimonial-slide {
@@ -514,7 +514,7 @@ body {
 
 /* FINAL CTA */
 .cta {
-    padding: 80px 50px;
+    padding: 65px 50px;
     text-align: center;
 }
 
